@@ -1,0 +1,19 @@
+body {
+    width: 100%;
+    position: relative;
+    background-color: #E6F7E0;
+}
+
+p {
+    text-align: center;
+    margin: 18% auto auto auto;
+    display: block;
+}
+
+input {
+    width: 550px;
+    height: 25px;
+    border: 1px solid #3492F7;
+    margin: 20px auto;
+    display: block;
+}
