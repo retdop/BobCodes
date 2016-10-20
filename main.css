@@ -1,13 +1,14 @@
 body {
-    width: 100%;
     position: relative;
-    background-color: #E6F7E0;
+    background-image: url('photo-1428542244207-0aaec316e609.jpeg');
 }
 
 p {
     text-align: center;
-    margin: 18% auto auto auto;
+    margin: auto auto auto auto;
     display: block;
+    font-family: courier;
+    font-size: 30px
 }
 
 input {

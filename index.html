@@ -1,15 +1,69 @@
 <html>
 <head>
     <link rel='stylesheet' type='text/css' href='./main.css' />
+    <script data-cfasync="false" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>UP1</title>
+    <script data-cfasync="false" type="text/javascript">
+    jQuery( document ).ready(function( $ ) {
+        // variable to hold request
+        var request;
+        // bind to the submit event of our form
+        $("#form").submit(function(event){
+            // abort any pending request
+            if (request) {
+                request.abort();
+            }
+            // setup some local variables
+            var $form = $(this);
+            // let's select and cache all the fields
+            var $inputs = $form.find("input");
+            // serialize the data in the form
+            var serializedData = $form.serialize();
+            // let's disable the inputs for the duration of the ajax request
+            // Note: we disable elements AFTER the form data has been serialized.
+            // Disabled form elements will not be serialized.
+            $inputs.prop("disabled", true);
+            $('#result').val('Sending');
+            // fire off the request to /form.php
+            request = $.ajax({
+                // url: "https://script.google.com/macros/s/AKfycbzV--xTooSkBLufMs4AnrCTdwZxVNtycTE4JNtaCze2UijXAg8/exec", // works
+                url: "https://script.google.com/macros/s/AKfycbwHOK8JjbPdQUyVoKsz7GeVX_pMjDvISfvmpPXqEraBMrKpR2UM/exec",  // clone
+                type: "post",
+                data: serializedData
+            });
+            // callback handler that will be called on success
+            request.done(function (response, textStatus, jqXHR){
+                // log a message to the console
+                $('#result').val('Sent!');
+            });
+            // callback handler that will be called on failure
+            request.fail(function (jqXHR, textStatus, errorThrown){
+                // log the error to the console
+                console.error(
+                    "The following error occured: "+
+                    textStatus, errorThrown
+                );
+            });
+            // callback handler that will be called regardless
+            // if the request failed or succeeded
+            request.always(function () {
+                // reenable the inputs
+                $inputs.prop("disabled", false);
+            });
+            // prevent default posting of form
+            event.preventDefault();
+        });
+    });
+</script>
 </head>
 <body>
     <div class="container">
-      <!-- <img src="https://www.google.com/images/srpr/logo4w.png" alt="Google" /> -->
-      <p>
-          UP1
-      </p>
-      <form>
-        <input type="text" />
+      <form id="form">
+          <p><label for="question">How can I help you?</label>
+              <input id="question" name="question" type="text" value="" /></p>
+          <p><label for="email">Email</label>
+              <input id="email" name="email"/></p>
+        <input id="result" type="submit" value="Send"/>
       </form>
   </div>
 </body>
