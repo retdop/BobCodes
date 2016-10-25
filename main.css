@@ -4,6 +4,11 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+}
+body {
+  height: 88%;
+  margin: 0;
 }
 
 @font-face {
@@ -54,4 +59,25 @@ input {
 #bob {
     margin-top: 5%;
     margin-bottom: 10%;
+}
+
+#about {
+  color: CDCDDB;
+  font-family: aller;
+  text-decoration: none;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  vertical-align: bottom;
+  position: absolute;
+  bottom: 0px;
+
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-family: aller;
+    font-size: 35px;
+    color: CDCDDB;
 }
