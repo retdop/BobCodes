@@ -4,9 +4,32 @@
     <script data-cfasync="false" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <title>UP1</title>
     <script data-cfasync="false" type="text/javascript">
-    jQuery( document ).ready(function( $ ) {
+    jQuery(document).ready(function($) {
         // variable to hold request
         var request;
+        $("#question").focus()
+        $("#question").keydown(function(event){
+            if(event.keyCode == 13){
+                // abort any pending request
+                if (request) {
+                    request.abort();
+                }
+                // setup some local variables
+                var $question_form = $(this);
+                // let's select and cache all the fields
+                var $inputs = $question_form.find("input");
+                // serialize the data in the form
+                var serializedData = $question_form.serialize();
+                // let's disable the inputs for the duration of the ajax request
+                // Note: we disable elements AFTER the form data has been serialized.
+                // Disabled form elements will not be serialized.
+                $('#question_form').css({'display': 'none'});
+                $('#email_send').css({'display': 'inline'});
+                $("#email").focus()
+                // prevent default posting of form
+                event.preventDefault();
+            };
+        })
         // bind to the submit event of our form
         $("#form").submit(function(event){
             // abort any pending request
@@ -26,7 +49,6 @@
             $('#result').val('Sending');
             // fire off the request to /form.php
             request = $.ajax({
-                // url: "https://script.google.com/macros/s/AKfycbzV--xTooSkBLufMs4AnrCTdwZxVNtycTE4JNtaCze2UijXAg8/exec", // works
                 url: "https://script.google.com/macros/s/AKfycbwHOK8JjbPdQUyVoKsz7GeVX_pMjDvISfvmpPXqEraBMrKpR2UM/exec",  // clone
                 type: "post",
                 data: serializedData
@@ -34,7 +56,10 @@
             // callback handler that will be called on success
             request.done(function (response, textStatus, jqXHR){
                 // log a message to the console
-                $('#result').val('Sent!');
+                console.log('sent')
+                $('#email_send').css({'display': 'none'})
+                $('#result').css({'display': 'inline'});
+                $('#question').val('');
             });
             // callback handler that will be called on failure
             request.fail(function (jqXHR, textStatus, errorThrown){
@@ -53,17 +78,26 @@
             // prevent default posting of form
             event.preventDefault();
         });
+        var imageNumber = Math.floor(Math.random() * 11);
+        $('html').css({'background-image': 'url(./image' + imageNumber.toString() + '.jpeg)'});
     });
 </script>
 </head>
 <body>
     <div class="container">
-      <form id="form">
+      <form id="form" autocomplete="off">
+          <div id="question_form">
           <p><label for="question">How can I help you?</label>
               <input id="question" name="question" type="text" value="" /></p>
-          <p><label for="email">Email</label>
-              <input id="email" name="email"/></p>
-        <input id="result" type="submit" value="Send"/>
+          </div>
+          <div id="email_send">
+              <p><label for="email">Email</label>
+                  <input id="email" name="email"/></p>
+            <input id="submit" type="submit" value="Send"/>
+        </div>
+        <div id="result">
+            <p>Thank you!</p>
+        </div>
       </form>
   </div>
 </body>

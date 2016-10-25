@@ -1,11 +1,19 @@
-body {
-    position: relative;
-    background-image: url('photo-1428542244207-0aaec316e609.jpeg');
+html {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+    margin-top: 10%;
+    margin-bottom: 20%;
 }
 
 p {
     text-align: center;
-    margin: auto auto auto auto;
+    margin: auto;
     display: block;
     font-family: courier;
     font-size: 30px
@@ -17,4 +25,8 @@ input {
     border: 1px solid #3492F7;
     margin: 20px auto;
     display: block;
+}
+
+#email_send, #question_send, #result, #submit {
+    display: none;
 }
