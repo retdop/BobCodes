@@ -29,6 +29,12 @@ jQuery(document).ready(function ($) {
       event.preventDefault()
     }
   })
+
+  function checkSubmit (e) {
+    if (e && e.keyCode === 13) {
+      $('#form').submit()
+    }
+  }
     // bind to the submit event of our form
   $('#form').submit(function (event) {
     // abort any pending request
