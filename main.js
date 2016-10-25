@@ -23,7 +23,8 @@ jQuery(document).ready(function ($) {
       $('#bob').css({
         'display': 'none'
       })
-      $('.container').css({'margin-top': '18.2%'})
+      $('#form').css({'margin-top': '14.5%'})
+      $('#home').css({'display': 'inline-block'})
         // prevent default posting of form
       event.preventDefault()
     }

@@ -7,8 +7,10 @@ html {
   height: 100%;
 }
 body {
-  height: 88%;
-  margin: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+  display: inline-block;
 }
 
 @font-face {
@@ -16,7 +18,7 @@ body {
     src: url('./Aller_Rg.ttf');
 }
 .container {
-    margin-top: 0%;
+    height: 100%;
 }
 
 p {
@@ -71,6 +73,13 @@ input {
   position: absolute;
   bottom: 0px;
 
+}
+#home {
+  color: CDCDDB;
+  font-family: aller;
+  text-decoration: none;
+  display: none;
+  margin: 1% 1% 1% 1%;
 }
 
 h1 {
