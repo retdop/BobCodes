@@ -1,32 +1,56 @@
 html {
-  background: no-repeat center center fixed;
+  background: url('./image.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+@font-face {
+    font-family: "aller";
+    src: url('./Aller_Rg.ttf');
+}
 .container {
-    margin-top: 10%;
-    margin-bottom: 20%;
+    margin-top: 0%;
 }
 
 p {
     text-align: center;
     margin: auto;
     display: block;
-    font-family: courier;
-    font-size: 30px
+    font-family: aller;
+    font-size: 35px;
+    color: white;
 }
-
+li {
+    text-align: center;
+    margin: auto;
+    display: block;
+    font-family: aller;
+    font-size: 25px;
+    color: white;
+}
+ul {
+    padding: 0;
+}
 input {
-    width: 550px;
-    height: 25px;
-    border: 1px solid #3492F7;
+    padding: 5px;
+    width: 750px;
+    height: 40px;
+    border: 1px solid #000000;
     margin: 20px auto;
     display: block;
+    border-radius: 5px;
+    background: rgba(208, 206, 248, 0.2);
+    font-size: 23px;
+    color: white;
 }
 
 #email_send, #question_send, #result, #submit {
     display: none;
+}
+
+#bob {
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
