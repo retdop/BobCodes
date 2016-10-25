@@ -20,7 +20,7 @@ p {
     display: block;
     font-family: aller;
     font-size: 35px;
-    color: white;
+    color: CDCDDB;
 }
 li {
     text-align: center;
@@ -28,7 +28,7 @@ li {
     display: block;
     font-family: aller;
     font-size: 25px;
-    color: white;
+    color: CDCDDB;
 }
 ul {
     padding: 0;
@@ -44,6 +44,7 @@ input {
     background: rgba(208, 206, 248, 0.2);
     font-size: 23px;
     color: white;
+    font-family: sans-serif;
 }
 
 #email_send, #question_send, #result, #submit {
