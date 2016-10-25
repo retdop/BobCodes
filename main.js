@@ -1,5 +1,10 @@
 /* global jQuery */
 
+function checkSubmit (e) {
+  if (e && e.keyCode === 13) {
+    $('#form').submit()
+  }
+}
 jQuery(document).ready(function ($) {
   // variable to hold request
   var request
@@ -30,11 +35,7 @@ jQuery(document).ready(function ($) {
     }
   })
 
-  function checkSubmit (e) {
-    if (e && e.keyCode === 13) {
-      $('#form').submit()
-    }
-  }
+
     // bind to the submit event of our form
   $('#form').submit(function (event) {
     // abort any pending request
