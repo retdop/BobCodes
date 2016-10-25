@@ -51,17 +51,17 @@ jQuery(document).ready(function ($) {
       type: 'post',
       data: serializedData
     })
+    $('#email_send').css({
+      'display': 'none'
+    })
+    $('#result').css({
+      'display': 'inline'
+    })
+    $('#question').val('')
     // callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR) {
       // log a message to the console
       console.log('sent')
-      $('#email_send').css({
-        'display': 'none'
-      })
-      $('#result').css({
-        'display': 'inline'
-      })
-      $('#question').val('')
     })
     // callback handler that will be called on failure
     request.fail(function (jqXHR, textStatus, errorThrown) {
