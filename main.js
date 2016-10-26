@@ -1,12 +1,11 @@
 /* global jQuery */
 
-function checkSubmit (e) {
-  if (e && e.keyCode === 13) {
-    $('#form').submit()
-  }
-}
-
 jQuery(document).ready(function ($) {
+  function checkSubmit (e) {
+    if (e && e.keyCode === 13) {
+      $('#form').submit()
+    }
+  }
   // variable to hold request
   var request
   $('#question').focus()
@@ -29,6 +28,26 @@ jQuery(document).ready(function ($) {
       $('#bob').css({
         'display': 'none'
       })
+      $('#form').css({'margin-top': '14.5%'})
+      $('#home').css({'display': 'inline-block'})
+        // prevent default posting of form
+      event.preventDefault()
+    }
+  })
+  $('#email').keydown(function (event) {
+    if (event.keyCode === 13) {
+        // abort any pending request
+      if (request) {
+        request.abort()
+      }
+        // let's disable the inputs for the duration of the ajax request
+        // Note: we disable elements AFTER the form data has been serialized.
+        // Disabled form elements will not be serialized.
+      $('#email_send').css({
+        'display': 'none'
+      })
+      $('#comments_send').css({'display': 'inline'})
+      $('#comments').focus()
       $('#form').css({'margin-top': '14.5%'})
       $('#home').css({'display': 'inline-block'})
         // prevent default posting of form
@@ -59,7 +78,7 @@ jQuery(document).ready(function ($) {
       type: 'post',
       data: serializedData
     })
-    $('#email_send').css({
+    $('#comments_send').css({
       'display': 'none'
     })
     $('#result').css({
@@ -69,7 +88,7 @@ jQuery(document).ready(function ($) {
     // callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR) {
       // log a message to the console
-      console.log('sent')
+      console.log('sent2')
     })
     // callback handler that will be called on failure
     request.fail(function (jqXHR, textStatus, errorThrown) {

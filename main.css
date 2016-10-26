@@ -54,7 +54,7 @@ input {
     font-family: sans-serif;
 }
 
-#email_send, #question_send, #result, #submit {
+#email_send, #question_send, #result, #submit, #comments_send {
     display: none;
 }
 
