@@ -47,6 +47,7 @@ jQuery(document).ready(function ($) {
         'display': 'none'
       })
       $('#comments_send').css({'display': 'inline'})
+      $('#submit').css({'display': 'inline'})
       $('#comments').focus()
       $('#form').css({'margin-top': '14.5%'})
       $('#home').css({'display': 'inline-block'})

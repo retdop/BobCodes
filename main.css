@@ -54,6 +54,34 @@ input {
     font-family: sans-serif;
 }
 
+textarea {
+  width: 750px;
+  height: 160px;
+  padding: 5px;
+  border: 1px solid #000000;
+  margin: 20px auto;
+  display: block;
+  border-radius: 5px;
+  background: rgba(208, 206, 248, 0.2);
+  font-size: 23px;
+  color: white;
+  font-family: sans-serif;
+}
+
+#submit {
+  padding: 5px;
+  width: 70px;
+  height: 40px;
+  border: 1px solid #000000;
+  margin: 20px auto;
+  border-radius: 5px;
+  background: rgba(56, 45, 20, 0.6);
+  font-size: 23px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-left: 45%;
+}
+
 #email_send, #question_send, #result, #submit, #comments_send {
     display: none;
 }
