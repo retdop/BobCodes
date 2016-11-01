@@ -1,0 +1,27 @@
+{
+  "name": "up1group",
+  "version": "1.0.0",
+  "description": "up1group landing page",
+  "main": "app.js",
+  "dependencies": {
+    "connect": "^3.5.0",
+    "express": "^4.14.0",
+    "formidable": "^1.0.17",
+    "serve-static": "^1.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retdop/retdop.github.io.git"
+  },
+  "author": "Gabriel Bastard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/retdop/retdop.github.io/issues"
+  },
+  "homepage": "https://github.com/retdop/retdop.github.io#readme"
+}
