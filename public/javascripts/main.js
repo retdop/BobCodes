@@ -59,22 +59,22 @@ jQuery(document).ready(function ($) {
             // let's disable the inputs for the duration of the ajax request
             // Note: we disable elements AFTER the form data has been serialized.
             // Disabled form elements will not be serialized.
-      $('#email_send').css({
-        'display': 'none'
-      })
-      $('#comments_send').css({
-        'display': 'inline'
-      })
-      $('#submit').css({
-        'display': 'inline'
-      })
-      $('#comments').focus()
-      $('#form').css({
-        'margin-top': '14.5%'
-      })
-      $('#home').css({
-        'display': 'inline-block'
-      })
+      // $('#email_send').css({
+      //   'display': 'none'
+      // })
+      // $('#comments_send').css({
+      //   'display': 'inline'
+      // })
+      // $('#submit').css({
+      //   'display': 'inline'
+      // })
+      // $('#comments').focus()
+      // $('#form').css({
+      //   'margin-top': '14.5%'
+      // })
+      // $('#home').css({
+      //   'display': 'inline-block'
+      // })
                 // prevent default posting of form
       event.preventDefault()
     }
@@ -103,17 +103,17 @@ jQuery(document).ready(function ($) {
       type: 'post',
       data: serializedData
     })
-    $('#comments_send').css({
-      'display': 'none'
-    })
-    $('#result').css({
-      'display': 'inline'
-    })
-    $('#question').val('')
+    // $('#comments_send').css({
+    //   'display': 'none'
+    // })
+    // $('#result').css({
+    //   'display': 'inline'
+    // })
+    // $('#question').val('')
                 // callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR) {
                     // log a message to the console
-      console.log('sent2')
+      // console.log('sent2')
     })
                 // callback handler that will be called on failure
     request.fail(function (jqXHR, textStatus, errorThrown) {

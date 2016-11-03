@@ -1,5 +1,5 @@
-/*html {
-  background: url('./image.jpeg') no-repeat center center fixed;
+html {
+  background: url('../imgs/image.jpeg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,23 +15,18 @@ body {
 
 @font-face {
     font-family: "aller";
-    src: url('./Aller_Rg.ttf');
-}
-.container {
-    height: 100%;
+    src: url('../Aller_Rg.ttf');
 }
 
 h2 {
     text-align: center;
-    margin: auto;
     display: block;
     font-family: aller;
-    font-size: 35px;
+    font-size: 25px;
     color: CDCDDB;
 }
 p {
     text-align: center;
-    margin: auto;
     display: block;
     font-family: aller;
     font-size: 25px;
@@ -39,7 +34,6 @@ p {
 }
 li {
     text-align: center;
-    margin: auto;
     display: block;
     font-family: aller;
     font-size: 25px;
@@ -49,9 +43,6 @@ ul {
     padding: 0;
 }
 input {
-    padding: 5px;
-    width: 750px;
-    height: 40px;
     border: 1px solid #000000;
     margin: 20px auto;
     display: block;
@@ -63,8 +54,6 @@ input {
 }
 
 textarea {
-  width: 750px;
-  height: 160px;
   padding: 5px;
   border: 1px solid #000000;
   margin: 20px auto;
@@ -78,8 +67,6 @@ textarea {
 
 #submit {
   padding: 5px;
-  width: 70px;
-  height: 40px;
   border: 1px solid #000000;
   margin: 20px auto;
   border-radius: 5px;
@@ -87,47 +74,51 @@ textarea {
   font-size: 23px;
   font-family: sans-serif;
   text-align: center;
-  margin-left: 45%;
+  /*margin-left: 45%;*/
 }
 
-#email_send, #question_send, #result, #submit, #comments_send {
-    display: none;
-}
-
-#bob {
-    margin-top: 5%;
-    margin-bottom: 10%;
-}
-
-#about {
-  color: CDCDDB;
-  font-family: aller;
-  text-decoration: none;
-  margin-bottom: 1%;
-  margin-left: 1%;
-  vertical-align: bottom;
-  position: absolute;
-  bottom: 0px;
-
-}
-#home {
-  color: CDCDDB;
-  font-family: aller;
-  text-decoration: none;
+#result {
   display: none;
-  margin: 1% 1% 1% 1%;
 }
+
+#header a {
+  color: CDCDDB;
+  font-family: aller;
+  text-decoration: none;
+}
+
 
 h1 {
     text-align: center;
-    margin: auto;
     display: block;
     font-family: aller;
     font-size: 35px;
     color: CDCDDB;
 }
-
+h3 {
+    text-align: center;
+    display: block;
+    font-family: aller;
+    font-size: 20px;
+    color: CDCDDB;
+}
 
 #upload-input {
   display: none;
-}*/
+}
+
+.upload-btn {
+  padding: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  background: rgba(56, 45, 20, 0.6);
+  font-size: 23px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-left: 42.5%;
+  color: white;
+}
+
+.her {
+  margin: 1% 1% 1% 1%;
+}

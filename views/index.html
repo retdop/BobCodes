@@ -1,15 +1,13 @@
 <html>
 
 <head>
-    <title>UP1</title>
+    <title>Meet Bob!</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script data-cfasync="false" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script data-cfasync="false" type="text/javascript" src="javascripts/main.js"></script>
     <link rel='stylesheet' type='text/css' href='css/main.css' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="css/styles.css" rel="stylesheet">
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -29,21 +27,26 @@
 </head>
 
 <body>
+    <div id="header">
+        <a id="ho" class="her" href="#home">Home</a>
+        <a id="fa" class="her" href="#faq">FAQ</a>
+        <a id="ab" class="her" href="#about">about</a>
+    </div>
     <div class="container">
-        <a id="home" href="/">Home</a>
-        <h1 id="bob">Hi, I'm Bob, your personal coder.<br>Ask me anything, I can do all the boring things you do on your computer.</h1>
-        <p>Focus on what you love, Bob will do the rest.</p>
+        <h1>Hi, I'm Bob, your personal coder.</h1>
+        <h2>Ask me anything, I can do all the boring things you do on your computer.</h2>
+        <h3>Focus on what you love, Bob will do the rest.</h3>
         <form id="form" autocomplete="off">
             <div id="question_form">
                 <h2><label for="question">How can I help you today?</label>
                     <input id="question" name="question" type="text" value="" /></h2>
-                <p>Ask me anything:
+                <!-- <p>Ask me anything:
                     <ul>
                         <li>Export data from a website</li>
                         <li>Update an excel spreadsheet</li>
                         <li>Send multiple emails</li>
                     </ul>
-                </p>
+                </p> -->
             </div>
             <div id="email_send">
                 <p><label for="email">Please give us your email</label>
@@ -55,21 +58,10 @@
                 </p>
             </div>
 
-            <!-- File uploader -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"></div>
-                                </div>
-                                <button class="btn btn-lg upload-btn" type="button">Upload File</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar"></div>
             </div>
+            <button class="btn btn-lg upload-btn" type="button">Upload File</button>
 
 
             <input id="submit" type="submit" value="Send" />
@@ -83,7 +75,7 @@
     <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
     <script src="javascripts/upload.js"></script>
 
 
@@ -113,12 +105,13 @@
     </div>
 
     <div class="container">
-        <h1 id="bob">About us</h1>
+        <h1 id="about">About us</h1>
         <p>We are passionate French entrepreneurs, trying to help people do what they are good at in their everyday jobs.</p>
 
 
-        <p>Photo de nous 3 avec linkedin links Our motto? Don’t work harder, work smarter</p>
-        <img src="http://i.imgur.com/ZgrSBBc.gif">
+        <p>Photo de nous 3 avec linkedin links </p>
+        <p>Our motto? Don’t work harder, work smarter</p>
+        <!-- <img src="http://i.imgur.com/ZgrSBBc.gif"> -->
         <p><a href="mailto:gautierchenard@gmail.com">Contact us!</a></p>
     </div>
 </body>
