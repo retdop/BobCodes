@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>Meet Bob | Focus on what you love, Bob will do the rest</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script data-cfasync="false" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="javascripts/main.js"></script>
+    <link rel='stylesheet' type='text/css' href='css/main.css' />
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-86644418-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="meetbob">
+            <h1>Hi, I'm Bob, your personal coder.</h1>
+        </div>
+        <form id="form" autocomplete="off">
+            <div id="question_form">
+                <h2><label for="question">How can I help you today?</label>
+                    <textarea id="question" name="question" type="text" value=""></textarea></h2>
+            </div>
+            <!-- <p>Ask me anything:
+                        <li>Export data from a website</li>
+                        <li>Update an excel spreadsheet</li>
+                        <li>Send multiple emails</li>
+                </p> -->
+            <div id="email_send">
+                <p>
+                    <!-- <label for="email">Please give us your email</label> -->
+                    <input id="email" name="email" type="email" placeholder="Email address" value=""></p>
+            </div>
+            <div id="buttons">
+              <div id="la">
+                <!-- <div class="progress">
+                <div class="progress-bar" role="progressbar"></div>
+            </div> -->
+                <button class="btn btn-lg upload-btn" type="button">Upload File</button>
+
+
+                <input id="submit" type="submit" value="Send" />
+              </div>
+            </div>
+            <div id="result">
+                <p>Thank you!<br/> You'll get an answer in less than 24h!</p>
+            </div>
+        </form>
+    </div>
+
+
+    <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
+    <script src="javascripts/upload.js"></script>
+
+
+    <div id="faq">
+        <h1>Help</h1>
+        <h2>What can I ask him exactly?</h2>
+        <p>Extract data from a website, find email addresses, send a customized email to 200 people, unsubscribe to all my spams, copy data from a PDF or a picture into Excel, change the title of 20 Powerpoint presentations, make macros on Excel, download
+            automatically the latest episode of Game of Thrones… and many more. Just ask him !</p>
+
+        <h2>How does it work?</h2>
+        <p>Bob is an amazing coder. He can do all these boring tasks you do at work, pretty quickly. Once you’ve asked him something, he will work day and night to write code to simplify your life. When his job is done, you will receive an email with what
+            you asked for. It could be either an Excel spreadsheet, a Powerpoint presentation, a CSV, a small executable program… Now, do you still want to do what Bob can do for you?</p>
+
+
+        <h2>Do I have to pay to use Bob?</h2>
+        <p>Bob is currently in beta, and it is entirely free for now.</p>
+
+        <h2>Robot or Human?</h2>
+        <p>Bob is a human-backed artificial intelligence. We take the best of both to provide you both high quality and rapidity</p>
+
+        <h2>How much time does Bob take to do my boring tasks?</h2>
+        <p>Usually less than 24 hours. If we estimate that is could last a bit longer, you will be noticed up-front by e-mail.</p>
+
+
+        <h2>Does Bob use my private data?</h2>
+        <p>Absolutely not. Bob respects your privacy at any time. All the files that would be sent back and forth would be deleted after Bob’s job is done. If the information you provide is deemed too critical, we can sign an NDA before receiving it.</p>
+    </div>
+
+    <div class="container">
+        <h1 id="about">About us</h1>
+        <p>We are passionate French entrepreneurs, trying to help people do what they are good at in their everyday jobs.</p>
+        <p>Our motto? Don’t work harder, work smarter</p>
+        <!-- <img src="http://i.imgur.com/ZgrSBBc.gif"> -->
+        <p><a href="mailto:gautierchenard@gmail.com">Contact us!</a></p>
+    </div>
+</body>
+
+</html>
