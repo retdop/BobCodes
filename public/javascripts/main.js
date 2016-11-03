@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
   }
     // variable to hold request
   var request
-  $('#question').focus()
+  // $('#question').focus()
   $('#question').keydown(function (event) {
     if (event.keyCode === 13) {
             // abort any pending request
