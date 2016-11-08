@@ -116,3 +116,21 @@ h3 {
 .her {
     margin: 1% 1% 1% 1%;
 }
+#all-examples {
+  display: block;
+  margin: auto;
+}
+.example {
+  width: 16%;
+  display: inline-block;
+  margin: auto;
+  height: 100%;
+}
+.circle2 {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 60%;
+    border-radius: 50%;
+    width: 90%;
+    height: 100px;
+}
