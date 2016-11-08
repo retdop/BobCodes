@@ -4,7 +4,7 @@ $('.upload-btn').on('click', function () {
   $('#upload-input').click()
 })
 
-$('#upload-input').on('change', function () {
+$('#upload-input').on('click', function () {
   var files = $(this).get(0).files
 
   if (files.length > 0) {

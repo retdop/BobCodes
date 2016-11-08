@@ -34,6 +34,7 @@
 	<div id="wrapper">
 
 		<!-- Header -->
+		<a id="bookmarkme" href="#" rel="sidebar" title="bookmark this page">Bookmark This Page</a>
 		<header id="header" class="alt">
 			<h1>Hi, I'm Bob, your personal coder</h1>
 			<p>How can I help you today?</p>
@@ -41,7 +42,7 @@
 		<form id="form" autocomplete="off">
 			<div id="question_form">
 				<h2>
-            <textarea id="question" name="question" type="text" value="" placeholder="Please tell us what your problem is"></textarea></h2>
+            <textarea id="question" name="question" type="text" value="" placeholder="Please tell me what your problem is"></textarea></h2>
 			</div>
 			<!-- <p>Ask me anything:
 	                        <li>Export data from a website</li>
@@ -55,13 +56,9 @@
 			</div>
 			<div id="buttons">
 				<div id="la">
-					<!-- <div class="progress">
-	                <div class="progress-bar" role="progressbar"></div>
-	            </div> -->
-					<button class="btn btn-lg upload-btn" type="button">Upload File</button>
-
-
-					<input id="submit" type="submit" value="Send" />
+					<input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
+					<button class="btn btn-lg upload-btn" type="button"><p style="font-size: 14pt">Upload File</p></button>
+					<input id="submit" type="submit" value="Send" style="font-weight: normal;"/>
 				</div>
 			</div>
 			<div id="result">
@@ -87,14 +84,14 @@
 
 						<h2>How does it work?</h2>
 						<p>Bob is an amazing coder. He can do all these boring tasks you do at work, pretty quickly. Once you’ve asked him something, he will work day and night to write code to simplify your life. When his job is done, you will receive an email with what
-								you asked for. It could be either an Excel spreadsheet, a Powerpoint presentation, a CSV, a small executable program… Now, do you still want to do what Bob can do for you?</p>
+								you asked for. It could be either an Excel spreadsheet, a Powerpoint presentation, a CSV, a small executable program…</p>
 
 
 						<h2>Do I have to pay to use Bob?</h2>
 						<p>Bob is currently in beta, and it is entirely free for now.</p>
 
 						<h2>Human after all?</h2>
-						<p>Bob is a human-backed artificial intelligence. We take the best of both to provide you both high quality and rapidity</p>
+						<p>Bob is a human-backed artificial intelligence. We take the best of both to provide you high quality and rapidity.</p>
 
 						<h2>How much time does Bob take to do my boring tasks?</h2>
 						<p>Usually less than 24 hours. If we estimate that is could last a bit longer, you will be noticed up-front by e-mail.</p>
@@ -116,8 +113,8 @@
 	<script src="./js/util.js"></script>
 	<!--[if lte IE 8]><script src="./js/ie/respond.min.js"></script><![endif]-->
 	<script src="./js/main.js"></script>
+	<!-- <script data-cfasync="false" type="text/javascript" src="javascripts/upload.js"></script> -->
 	<script data-cfasync="false" type="text/javascript" src="javascripts/main.js"></script>
-	<script data-cfasync="false" type="text/javascript" src="javascripts/upload.js"></script>
 
 </body>
 
