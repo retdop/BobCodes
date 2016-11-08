@@ -86,12 +86,13 @@ jQuery(document).ready(function($) {
                 // let's select and cache all the fields
             var $inputs = $form.find('input')
                 // serialize the data in the form
-            var serializedData = $form.serialize()
+            var serializedData = $form.serialize() + '&uploads=' + encodeURIComponent($('#upload-input').val())
+            console.log($form, serializedData);
                 // let's disable the inputs for the duration of the ajax request
                 // Note: we disable elements AFTER the form data has been serialized.
                 // Disabled form elements will not be serialized.
             $inputs.prop('disabled', true)
-            $('#result').val('Sending')
+            $('#submit').val('Sending')
                 // fire off the request to /form.php
             request = $.ajax({
                     url: 'https://script.google.com/macros/s/AKfycbwHOK8JjbPdQUyVoKsz7GeVX_pMjDvISfvmpPXqEraBMrKpR2UM/exec', // clone
@@ -109,6 +110,7 @@ jQuery(document).ready(function($) {
             request.done(function(response, textStatus, jqXHR) {
                     // log a message to the console
                     // console.log('sent2')
+                    $('#submit').val('Sent!')
                 })
                 // callback handler that will be called on failure
             request.fail(function(jqXHR, textStatus, errorThrown) {
@@ -148,17 +150,16 @@ jQuery(document).ready(function($) {
                 var file = files[i]
 
                 // add the files to formData object for the data payload
-                formData.append('uploads[]', file, file.name)
+                formData.append('uploads', file, file.name)
             }
 
             $.ajax({
-                url: '/',
+                url: '/upload',
                 type: 'POST',
                 data: formData,
                 processData: false,
                 contentType: false,
                 success: function(data) {
-                    console.log('upload successful!\n' + data)
                 },
                 xhr: function() {
                     // create an XMLHttpRequest
