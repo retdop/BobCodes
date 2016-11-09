@@ -125,6 +125,7 @@ h3 {
   display: inline-block;
   margin: auto;
   height: 100%;
+  vertical-align: top;
 }
 .circle2 {
     background-repeat: no-repeat;
@@ -133,4 +134,8 @@ h3 {
     border-radius: 50%;
     width: 90%;
     height: 100px;
+}
+
+#email_send p {
+    margin: 0;
 }
