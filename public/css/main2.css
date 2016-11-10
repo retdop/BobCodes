@@ -134,6 +134,7 @@ h3 {
     border-radius: 50%;
     width: 90%;
     height: 100px;
+    margin: auto;
 }
 
 #email_send p {
